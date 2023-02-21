@@ -1,25 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import {Stage, Sprite} from "@inlet/react-pixi"
+import wizard from "./wizard.png";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <Stage width={300} height={300} options={{backgroundColor: 0x012b30, antialias: true}}>
+            <Sprite image={wizard}/>
+        </Stage>
+    )
 }
-
 export default App;
